@@ -4,7 +4,7 @@
 #define LED1 GpioDataRegs.GPBDAT.bit.GPIO34
 #define LED2 GpioDataRegs.GPADAT.bit.GPIO31
 
-/////////  MAAZ KHAN  //////////
+/////////  Vande  //////////
 void main(){
     //Initialization of System Control
     InitSysCtrl();
@@ -12,7 +12,7 @@ void main(){
     InitGpio();
     EALLOW;
 
-    /////////  MAAZ KHAN  //////////
+    /////////  Vande  //////////
 
     //Configure GPIO34 and  GPIO31 as an Output
     GpioCtrlRegs.GPAMUX2.bit.GPIO31 = 0;
@@ -25,7 +25,7 @@ void main(){
     //Initialization of CPU_Timers
     InitCpuTimers();
 
-    /////////  MAAZ KHAN  //////////
+    /////////  Vande  //////////
 
     //Configure Timer0 for Delay Generation;
     CpuTimer0Regs.PRD.all = 200000000; // 2 Second Of Delay
@@ -38,7 +38,7 @@ void main(){
     CpuTimer0Regs.TCR.bit.TSS = 0;
     while(1){
 
-        /////////  MAAZ KHAN  //////////
+        /////////  Vande  //////////
 
         LED1=~LED1;
         //wait for timer to expire
@@ -61,7 +61,7 @@ void Timer_Delay(void);
 #define LED_1 GpioDataRegs.GPBDAT.bit.GPIO34
 
 
-/////////  MAAZ KHAN  //////////
+/////////  Vande  //////////
 
 void main(void)
 {
@@ -74,7 +74,7 @@ void main(void)
     // Initialize LED_1 as output
     EALLOW;
 
-    /////////  MAAZ KHAN  //////////
+    /////////  Vande  //////////
 
     GpioCtrlRegs.GPBMUX1.bit.GPIO34 = 0;
     // Use GPIO 38 as an Output
@@ -83,7 +83,7 @@ void main(void)
 
     while(1)
     {
-        /////////  MAAZ KHAN  //////////
+        /////////  Vande  //////////
         LED_1=1;
         //generate delay using timer
         Timer_Delay();
@@ -93,7 +93,7 @@ void main(void)
     }
 }
 
-/////////  MAAZ KHAN  //////////
+/////////  Vande  //////////
 void Timer_Delay()
 {
     // Initialization of Cpu Timers
